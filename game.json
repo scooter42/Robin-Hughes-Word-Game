@@ -99,61 +99,61 @@
     "resources": [
       {
         "alwaysLoaded": false,
-        "file": "ship.png",
+        "file": "gfx/meteorSmall.png",
         "kind": "image",
         "metadata": "",
-        "name": "ship.png",
+        "name": "gfx\\meteorSmall.png",
         "smoothed": false,
         "userAdded": true
       },
       {
         "alwaysLoaded": false,
-        "file": "shipLeft.png",
+        "file": "gfx/ship.png",
         "kind": "image",
         "metadata": "",
-        "name": "shipLeft.png",
+        "name": "gfx\\ship.png",
         "smoothed": false,
         "userAdded": true
       },
       {
         "alwaysLoaded": false,
-        "file": "shipRight.png",
+        "file": "gfx/shipLeft.png",
         "kind": "image",
         "metadata": "",
-        "name": "shipRight.png",
+        "name": "gfx\\shipLeft.png",
         "smoothed": false,
         "userAdded": false
       },
       {
         "alwaysLoaded": false,
-        "file": "meteorSmall.png",
+        "file": "gfx/shipRight.png",
         "kind": "image",
         "metadata": "",
-        "name": "meteorSmall.png",
+        "name": "gfx\\shipRight.png",
         "smoothed": false,
         "userAdded": false
       },
       {
         "alwaysLoaded": false,
-        "file": "laserRed-1.png",
+        "file": "gfx/laserRed-1.png",
         "kind": "image",
         "metadata": "",
-        "name": "laserRed-1.png",
+        "name": "gfx\\laserRed-1.png",
         "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "explo.wav",
-        "kind": "audio",
-        "metadata": "{\"jfxr\":{\"data\":\"{\\\"_version\\\":1,\\\"_name\\\":\\\"Laser/shoot 4\\\",\\\"_locked\\\":[],\\\"sampleRate\\\":44100,\\\"attack\\\":0,\\\"sustain\\\":0.05,\\\"sustainPunch\\\":0,\\\"decay\\\":0.05,\\\"tremoloDepth\\\":0,\\\"tremoloFrequency\\\":10,\\\"frequency\\\":1800,\\\"frequencySweep\\\":-1300,\\\"frequencyDeltaSweep\\\":-1200,\\\"repeatFrequency\\\":0,\\\"frequencyJump1Onset\\\":33,\\\"frequencyJump1Amount\\\":0,\\\"frequencyJump2Onset\\\":66,\\\"frequencyJump2Amount\\\":0,\\\"harmonics\\\":0,\\\"harmonicsFalloff\\\":0.5,\\\"waveform\\\":\\\"triangle\\\",\\\"interpolateNoise\\\":true,\\\"vibratoDepth\\\":200,\\\"vibratoFrequency\\\":17,\\\"squareDuty\\\":30,\\\"squareDutySweep\\\":-25,\\\"flangerOffset\\\":0,\\\"flangerOffsetSweep\\\":0,\\\"bitCrush\\\":16,\\\"bitCrushSweep\\\":0,\\\"lowPassCutoff\\\":22050,\\\"lowPassCutoffSweep\\\":0,\\\"highPassCutoff\\\":0,\\\"highPassCutoffSweep\\\":0,\\\"compression\\\":1,\\\"normalization\\\":true,\\\"amplification\\\":100}\",\"name\":\"explo\"}}",
-        "name": "explo.wav",
         "userAdded": true
       },
       {
-        "file": "laser.wav",
+        "file": "sound/laser.wav",
         "kind": "audio",
         "metadata": "",
-        "name": "laser.wav",
+        "name": "sound\\laser.wav",
+        "userAdded": true
+      },
+      {
+        "file": "sound/explo.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "sound\\explo.wav",
         "userAdded": true
       }
     ],

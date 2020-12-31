@@ -339,7 +339,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "meteorSmall.png",
+                  "image": "gfx\\meteorSmall.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -422,7 +422,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "ship.png",
+                  "image": "gfx\\ship.png",
                   "points": [
                     {
                       "name": "Shoot",
@@ -457,7 +457,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "shipLeft.png",
+                  "image": "gfx\\shipLeft.png",
                   "points": [
                     {
                       "name": "Shoot",
@@ -492,7 +492,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "shipRight.png",
+                  "image": "gfx\\shipRight.png",
                   "points": [
                     {
                       "name": "Shoot",
@@ -543,7 +543,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "laserRed-1.png",
+                  "image": "gfx\\laserRed-1.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1016,7 +1016,7 @@
           },
           "parameters": [
             "",
-            "laser.wav",
+            "sound\\laser.wav",
             "",
             "50",
             ""
@@ -1080,7 +1080,7 @@
           },
           "parameters": [
             "",
-            "explo.wav",
+            "sound\\explo.wav",
             "",
             "50",
             "RandomFloatInRange(0.5, 2.0)"

@@ -1,16 +1,16 @@
 {
-  "b": 0,
+  "b": 255,
   "disableInputWhenNotFocused": true,
   "mangledName": "New_32scene",
   "name": "New scene",
   "oglFOV": 90,
   "oglZFar": 500,
   "oglZNear": 1,
-  "r": 0,
+  "r": 255,
   "standardSortMethod": true,
-  "stopSoundsOnStartup": true,
+  "stopSoundsOnStartup": false,
   "title": "",
-  "v": 0,
+  "v": 255,
   "uiSettings": {
     "grid": false,
     "gridB": 255,
@@ -20,7 +20,7 @@
     "gridOffsetY": 0,
     "gridR": 158,
     "gridWidth": 32,
-    "snap": true,
+    "snap": false,
     "windowMask": false,
     "zoomFactor": 0.544
   },
@@ -120,6 +120,38 @@
       "x": 11,
       "y": 11,
       "zOrder": 9,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 608,
+      "layer": "stars",
+      "locked": false,
+      "name": "stars",
+      "persistentUuid": "38e3d706-a0fa-4926-8fb8-c45d9c8d6fee",
+      "width": 800,
+      "x": 0,
+      "y": 0,
+      "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "shield",
+      "persistentUuid": "963bcaac-1a4b-4f77-a89b-da1e6d13afc0",
+      "width": 0,
+      "x": 409,
+      "y": 540,
+      "zOrder": 10,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -709,6 +741,60 @@
       "zoneRadius": 3,
       "variables": [],
       "behaviors": []
+    },
+    {
+      "height": 32,
+      "name": "stars",
+      "tags": "",
+      "texture": "gfx\\stars.jpg",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 32,
+      "variables": [],
+      "behaviors": []
+    },
+    {
+      "name": "shield",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "gfx\\shield.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 75,
+                    "y": 90
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 75,
+                    "y": 90
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "events": [
@@ -749,6 +835,52 @@
           "parameters": [
             "",
             "\"create\""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Opacity"
+          },
+          "parameters": [
+            "shield",
+            "=",
+            "50"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "TiledSpriteObject::YOffset"
+          },
+          "parameters": [
+            "stars",
+            "+",
+            "-100*TimeDelta()"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "MettreAutour"
+          },
+          "parameters": [
+            "shield",
+            "ship",
+            "0",
+            "0"
           ],
           "subInstructions": []
         }
@@ -1307,6 +1439,22 @@
                 "WordTot",
                 "-",
                 "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Tween::AddObjectOpacityTween"
+              },
+              "parameters": [
+                "shield",
+                "Tween",
+                "",
+                "50",
+                "\"linear\"",
+                "500",
+                ""
               ],
               "subInstructions": []
             }
@@ -1905,20 +2053,6 @@
             {
               "type": {
                 "inverted": false,
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "explosion",
-                "meteor.X()",
-                "meteor.Y()",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
                 "value": "PlaySound"
               },
               "parameters": [
@@ -2017,6 +2151,34 @@
             {
               "type": {
                 "inverted": false,
+                "value": "Tween::AddObjectOpacityTween"
+              },
+              "parameters": [
+                "shield",
+                "Tween",
+                "",
+                "255",
+                "\"linear\"",
+                "500",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "Lives",
+                "-",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
                 "value": "Create"
               },
               "parameters": [
@@ -2052,39 +2214,129 @@
                 ""
               ],
               "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarGlobal"
-              },
-              "parameters": [
-                "Score",
-                "-",
-                "50"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "BBText::SetBBText"
-              },
-              "parameters": [
-                "Score",
-                "=",
-                "\"[outline=gray]Score: \"+GlobalVariableString(Score)+\"[/outline]\""
-              ],
-              "subInstructions": []
             }
           ],
           "events": []
         }
       ],
       "parameters": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "VarGlobal"
+          },
+          "parameters": [
+            "Lives",
+            "<=",
+            "0"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": [],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "ParticleSystem::ParticleLifeTimeMin"
+          },
+          "parameters": [
+            "explosion",
+            "=",
+            "1000"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "explosion",
+            "ship.X()",
+            "ship.Y()",
+            ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "sound\\explo.wav",
+            "",
+            "100",
+            "RandomFloatInRange(0.5, 2.0)"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Delete"
+          },
+          "parameters": [
+            "shield",
+            ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Delete"
+          },
+          "parameters": [
+            "thrust",
+            ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Delete"
+          },
+          "parameters": [
+            "ship",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
     }
   ],
   "layers": [
+    {
+      "ambientLightColorB": 1702453580,
+      "ambientLightColorG": 0,
+      "ambientLightColorR": 0,
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "name": "stars",
+      "visibility": true,
+      "cameras": [],
+      "effects": []
+    },
     {
       "ambientLightColorB": 36,
       "ambientLightColorG": 6968752,
@@ -2108,7 +2360,7 @@
       "effects": []
     },
     {
-      "ambientLightColorB": 1702453580,
+      "ambientLightColorB": 1702453632,
       "ambientLightColorG": 7655144,
       "ambientLightColorR": 7651968,
       "followBaseLayerCamera": false,
@@ -2131,6 +2383,10 @@
     {
       "name": "TopDownMovement",
       "type": "TopDownMovementBehavior::TopDownMovementBehavior"
+    },
+    {
+      "name": "Tween",
+      "type": "Tween::TweenBehavior"
     }
   ]
 }

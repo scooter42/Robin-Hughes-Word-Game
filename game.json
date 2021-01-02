@@ -169,6 +169,24 @@
         "metadata": "",
         "name": "sound\\good.wav",
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "gfx/stars.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "gfx\\stars.jpg",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "gfx/shield.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "gfx\\shield.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -179,6 +197,10 @@
     {
       "name": "Score",
       "value": ""
+    },
+    {
+      "name": "Lives",
+      "value": "3"
     }
   ],
   "layouts": [

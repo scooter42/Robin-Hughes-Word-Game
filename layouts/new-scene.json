@@ -187,6 +187,10 @@
               "value": "cherry"
             },
             {
+              "name": "13",
+              "value": "orange"
+            },
+            {
               "name": "2",
               "value": "pear"
             },
@@ -216,13 +220,13 @@
             },
             {
               "name": "9",
-              "value": "kiwi"
+              "value": "kiwifruit"
             }
           ]
         },
         {
           "name": "WordTot",
-          "value": "12"
+          "value": "13"
         },
         {
           "name": "WordCurrent",
@@ -280,6 +284,10 @@
               "value": "cabbage"
             },
             {
+              "name": "13",
+              "value": "kiwi"
+            },
+            {
               "name": "2",
               "value": "corn"
             },
@@ -315,7 +323,7 @@
         },
         {
           "name": "WordTot",
-          "value": "12"
+          "value": "13"
         },
         {
           "name": "WordCurrent",
@@ -823,7 +831,7 @@
           "parameters": [
             "WordTot",
             "=",
-            "12"
+            "13"
           ],
           "subInstructions": []
         },
@@ -893,7 +901,7 @@
       "colorR": 74,
       "creationTime": 0,
       "disabled": false,
-      "folded": true,
+      "folded": false,
       "name": "Shuffle Lists",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -920,7 +928,7 @@
               "disabled": false,
               "folded": false,
               "type": "BuiltinCommonInstructions::Repeat",
-              "repeatExpression": "24",
+              "repeatExpression": "26",
               "conditions": [],
               "actions": [
                 {
@@ -995,7 +1003,7 @@
               "disabled": false,
               "folded": false,
               "type": "BuiltinCommonInstructions::Repeat",
-              "repeatExpression": "24",
+              "repeatExpression": "26",
               "conditions": [],
               "actions": [
                 {
@@ -1085,7 +1093,7 @@
       "colorR": 74,
       "creationTime": 0,
       "disabled": false,
-      "folded": true,
+      "folded": false,
       "name": "Generate Word Pairs",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -1516,7 +1524,7 @@
       "colorR": 74,
       "creationTime": 0,
       "disabled": false,
-      "folded": true,
+      "folded": false,
       "name": "Ship Control",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -2327,7 +2335,7 @@
   ],
   "layers": [
     {
-      "ambientLightColorB": 1702453580,
+      "ambientLightColorB": 1702453632,
       "ambientLightColorG": 0,
       "ambientLightColorR": 0,
       "followBaseLayerCamera": false,

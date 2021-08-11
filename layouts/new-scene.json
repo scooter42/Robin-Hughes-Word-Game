@@ -22,7 +22,7 @@
     "gridWidth": 32,
     "snap": false,
     "windowMask": false,
-    "zoomFactor": 0.544
+    "zoomFactor": 0.88
   },
   "objectsGroups": [
     {
@@ -127,7 +127,7 @@
     {
       "angle": 0,
       "customSize": true,
-      "height": 608,
+      "height": 599,
       "layer": "stars",
       "locked": false,
       "name": "stars",
